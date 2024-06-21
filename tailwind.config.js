@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        // "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
@@ -21,16 +21,20 @@ module.exports = {
     themes: [
       {
         carDoctorTheme: {
-          ...require('daisyui/src/')
-          "primary": "#ff3811",
-          "secondary": "#f6d860",
-          "accent": "#37cdbe",
-          "neutral": "#3d4451",
-          "base-100": "#ffffff",
+          ...require('daisyui/src/theming/themes')['light'],
+          primary: "#ff3811",
+          secondary: "teal",
+          
+
+          ".btn-primary": {
+            "color": '#fff'
+          },
+          ".btn-outline.btn-primary:hover":{
+            "color": "#fff"
+          },
         },
       },
-      "dark",
-      "cupcake",
+     
     ],
   },
 };
