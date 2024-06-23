@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 
 const ServicesCard = ({service}) => {
-  const {title, img, description, price, facility} = service || {};
+  const {title, img, price} = service || {};
   return (
     <div className="card w-96 bg-base-100 shadow-xl">
     <figure>
